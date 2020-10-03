@@ -1,0 +1,15 @@
+{
+  "name": "memo-tracker",
+  "version": "1.0.0",
+  "description": "An application for tracking notes and managing them using MERN stack. This project will include an expand tree for viewing tags.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
