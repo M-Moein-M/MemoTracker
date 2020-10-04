@@ -4,12 +4,17 @@
   "description": "An application for tracking notes and managing them using MERN stack. This project will include an expand tree for viewing tags.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./backend/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
