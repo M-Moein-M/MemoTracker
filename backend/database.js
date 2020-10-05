@@ -3,7 +3,7 @@ const userSchema = require('./userSchema');
 const User = mongoose.model('User', userSchema);
 require('dotenv').config();
 
-mongoose.connect(process.env.DB_CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.USERS_DB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 const connector = mongoose.connection;
 connector.on('error', (err) => console.error(err));
 connector.once('open', () => console.log('MongoDB is connected'));
