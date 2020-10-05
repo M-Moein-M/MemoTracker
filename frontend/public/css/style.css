@@ -1,0 +1,137 @@
+:root {
+  /* gold */
+  --main-color: #81b7d2;
+  /* blue */
+  --secondary-color: #ffd662ff;
+  /* text */
+  --text-color: #424242;
+}
+
+* {
+  font-family: 'Cantarell', sans-serif;
+  font-family: 'Hind Madurai', sans-serif;
+
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+.hide {
+  display: none;
+}
+
+.page-title {
+  text-align: center;
+}
+
+/* register page  */
+#register-form,
+#login-form {
+  width: 400px;
+  border: 2px var(--secondary-color) solid;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+p a {
+  text-decoration: underline;
+}
+p a:hover {
+  text-decoration: underline;
+}
+
+#about-paragraph {
+  line-height: 28px;
+  text-align: justify;
+  width: 400px;
+}
+
+/* shake animation */
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-0.5deg);
+  }
+  20% {
+    transform: rotate(0.5deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(0.5deg);
+  }
+  50% {
+    transform: rotate(-0.5deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-0.5deg);
+  }
+  80% {
+    transform: rotate(0.5deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-0.5deg);
+  }
+}
+
+.stop-shake-on-hover {
+  animation: shake 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.stop-shake-on-hover:hover {
+  animation: none;
+}
+
+#header {
+  height: 44px;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--secondary-color);
+  list-style: none;
+}
+
+#header > a {
+  text-decoration: none;
+}
+
+#header li {
+  display: inline-block;
+  padding: 10px 20px;
+
+  transition-duration: 0.1s;
+}
+#header li:hover {
+  background-color: var(--main-color);
+}
+
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+
+/* showing username on header */
+#header-username {
+  font-weight: bold;
+  background-color: var(--main-color);
+}
+
+.alert button span {
+  color: rgb(48, 48, 48);
+}
