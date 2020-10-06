@@ -16,6 +16,7 @@ router.post('/', isNotAuthenticated, (req, res) => {
   // this object will be used so that user don't have to fill the form from scratch
   const renderObj = { registerErrors: [] };
 
+  // check if password is more than 6 characters
   if (req.body.password.length < 6) {
     renderObj.registerErrors.push('Password must be at least 6 characters!');
     renderObj.email = req.body.email; // we don't want the user to type the email again
@@ -70,10 +71,7 @@ router.post('/', isNotAuthenticated, (req, res) => {
 
         // show a confirmation alert and redirect the user to log-in to their account
         req.flash('appMsg', 'You may now sign-in with your account');
-        res.render('login', {
-          isUserLogged: req.isAuthenticated(),
-          username: req.isAuthenticated() ? req.user.username : null,
-        });
+        res.redirect('/login');
       }
     });
   });
@@ -82,7 +80,10 @@ router.post('/', isNotAuthenticated, (req, res) => {
 // make sure user is not authenticated already
 function isNotAuthenticated(req, res, next) {
   if (!req.isAuthenticated()) next();
-  else res.redirect('/');
+  else {
+    req.flash('appMsgError', "You're already logged in.");
+    res.redirect('/');
+  }
 }
 
 module.exports = router;
