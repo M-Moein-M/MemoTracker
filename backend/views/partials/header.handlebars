@@ -1,8 +1,13 @@
 <ul id="header">
-  <a href="/" class="ml-5">
-    <li>Home</li>
+  <a href="/">
+    <li class="float-left ml-5">Home</li>
   </a>
   {{#if isUserLogged}}
+
+  <a href="/memo">
+    <li class="float-left ml-5">Memo</li>
+  </a>
+
   <a href="/logout">
     <li class="float-right mr-5">Logout</li>
   </a>

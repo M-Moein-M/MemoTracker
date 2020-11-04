@@ -71,6 +71,7 @@ app.set('view engine', 'handlebars');
 app.use('/', require('./routes/index.js'));
 app.use('/register', require('./routes/register'));
 app.use('/login', require('./routes/login'));
+app.use('/memo', require('./routes/memo'));
 
 app.get('/logout', (req, res) => {
   req.logout();
