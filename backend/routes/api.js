@@ -1,8 +1,6 @@
 const router = require('express').Router();
 
-router.post('/memo/new', (req, res) => {
-  console.log('post request received...\n');
-
+router.post('/memo/new', isAuthenticated, (req, res) => {
   console.log(req.body['memo-body']);
   res.redirect('/memo');
 });

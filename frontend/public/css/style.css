@@ -28,11 +28,17 @@ body {
 
 /* register page  */
 #register-form,
-#login-form {
+#login-form,
+#new-memo-form {
   width: 400px;
   border: 2px var(--secondary-color) solid;
   border-radius: 5px;
   padding: 20px;
+}
+
+#new-memo-form textarea {
+  width: 100%;
+  min-height: 200px;
 }
 
 p a {
