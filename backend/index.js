@@ -72,6 +72,7 @@ app.use('/', require('./routes/index.js'));
 app.use('/register', require('./routes/register'));
 app.use('/login', require('./routes/login'));
 app.use('/memo', require('./routes/memo'));
+app.use('/api', require('./routes/api'));
 
 app.get('/logout', (req, res) => {
   req.logout();
