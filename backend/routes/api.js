@@ -2,6 +2,7 @@ const router = require('express').Router();
 
 router.post('/memo/new', isAuthenticated, (req, res) => {
   console.log(req.body['memo-body']);
+  console.log(req.body['memo-tags']);
   res.redirect('/memo');
 });
 
