@@ -1,8 +1,14 @@
 const router = require('express').Router();
+const { memoHandler } = require('../memoHandler.js');
 
 router.post('/memo/new', isAuthenticated, (req, res) => {
-  console.log(req.body['memo-body']);
-  console.log(req.body['memo-tags']);
+  const text = req.body['memo-body'];
+  const tags = req.body['memo-tags'];
+  console.log(text);
+  console.log(tags);
+
+  memoHandler.insertNewMemo(text, tags);
+
   res.redirect('/memo');
 });
 
