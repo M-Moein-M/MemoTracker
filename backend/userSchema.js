@@ -13,6 +13,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Password is required'],
   },
+  cluster: {
+    type: Object,
+    default: {},
+    required: [true, 'Initial cluster is required'],
+  },
   created: {
     type: Date,
     default: Date.now,
