@@ -17,7 +17,7 @@ class Tagger extends EventEmitter {
           clusterID: clusterID,
         };
 
-        await insertDoc(cluster);
+        await insertDoc(cluster, cluster.clusterID);
 
         return clusterID;
       } catch (error) {
