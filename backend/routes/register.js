@@ -66,6 +66,8 @@ router.post('/', isNotAuthenticated, (req, res) => {
           email,
           username,
           password: bcrypt.hashSync(password, 10),
+          // default value is used in memoHandler to create cluster for first time
+          cluster: { default: true },
         };
         createUser(user);
 

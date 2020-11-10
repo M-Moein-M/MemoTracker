@@ -7,7 +7,7 @@ router.post('/memo/new', isAuthenticated, (req, res) => {
   console.log(text);
   console.log(tags);
 
-  memoHandler.insertNewMemo(text, tags);
+  memoHandler.insertNewMemo(text, tags, req.user);
 
   res.redirect('/memo');
 });

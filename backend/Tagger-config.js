@@ -8,6 +8,7 @@ async function insertDoc(cluster, clusterID) {
   // update default cluster with the new cluster
   await User.updateOne({ _id: clusterID }, { cluster: cluster }, (err, doc) => {
     if (err) throw err;
+    console.log(doc);
   });
 }
 
